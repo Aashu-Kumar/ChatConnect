@@ -10,7 +10,7 @@ A real-time chat application built using **React Native**, **Node.js**, and **So
 
 🔗 **GitHub Repository:** https://github.com/Aashu-Kumar/ChatConnect
 
-📦 **APK File:** *(Add Google Drive APK link here)*
+📦 **APK File:** https://drive.google.com/file/d/1OH304VMbfiuPODD9Bw7I6YtOhyEb5pDF/view?usp=drive_link
 
 ---
 
