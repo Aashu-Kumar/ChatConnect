@@ -161,7 +161,7 @@ npm run android
 ### 🔐 Login Screen
 
 <p align="center">
-  <img src="assets/login_screen.png" width="280"/>
+  <img src="assets/login_screen.jpg" width="280"/>
 </p>
 
 ---
@@ -169,7 +169,7 @@ npm run android
 ### 💬 Chat Screen
 
 <p align="center">
-  <img src="assets/chat_screen.png" width="280"/>
+  <img src="assets/chat_screen.jpg" width="280"/>
 </p>
 
 ---
@@ -177,7 +177,7 @@ npm run android
 ### ⚡ Real-Time Chat
 
 <p align="center">
-  <img src="assets/realtime_chat.png" width="280"/>
+  <img src="assets/realtime_chat.jpg" width="280"/>
 </p>
 
 ---
@@ -185,7 +185,7 @@ npm run android
 ### 📱 Multi-Device Demo
 
 <p align="center">
-  <img src="assets/multi_device_demo.jpg" width="700"/>
+  <img src="assets/multi_device_demo.jpeg" width="700"/>
 </p>
 
 ---
