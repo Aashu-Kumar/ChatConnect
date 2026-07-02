@@ -21,7 +21,6 @@ type Message = {
   id: string;
   sender: string;
   text: string;
-  mine: boolean;
   time: string;
 };
 
@@ -73,7 +72,6 @@ const ChatScreen = ({ route }: Props) => {
     id: Date.now().toString(),
     sender: username,
     text: message,
-    mine: true,
     time: new Date().toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
@@ -129,9 +127,10 @@ const ChatScreen = ({ route }: Props) => {
     }
     renderItem={({item})=>(
         <MessageBubble
-            text={item.text}
-            mine={item.mine}
-            time={item.time}
+        sender={item.sender}
+        text={item.text}
+        mine={item.sender === username}
+        time={item.time}
         />
     )}
 />

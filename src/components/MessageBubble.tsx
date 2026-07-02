@@ -6,12 +6,13 @@ import {
 } from 'react-native';
 
 type Props = {
+  sender: string;
   text: string;
   mine: boolean;
   time: string;
 };
 
-const MessageBubble = ({ text, mine, time }: Props) => {
+const MessageBubble = ({ sender, text, mine, time }: Props) => {
   return (
     <View
       style={[
@@ -25,6 +26,12 @@ const MessageBubble = ({ text, mine, time }: Props) => {
           mine ? styles.myBubble : styles.otherBubble,
         ]}>
 
+        {!mine && (
+            <Text style={styles.sender}>
+            {sender}
+            </Text>
+            )}
+
         <Text
         style={[
             styles.message,
@@ -33,15 +40,29 @@ const MessageBubble = ({ text, mine, time }: Props) => {
           {text}
         </Text>
 
+        <View style={styles.footer}>
+
         <Text
         style={[
-            styles.time,
-            { color: mine ? '#EEEEEE' : '#666666' },
+        styles.time,
+        {
+        color:mine ? '#E5E7EB':'#666',
+        },
         ]}>
-          {time}
+        {time}
         </Text>
 
-      </View>
+        {mine &&
+
+        <Text style={styles.tick}>
+        ✓
+        </Text>
+
+        }
+
+        </View>
+
+     </View>
 
     </View>
   );
@@ -56,6 +77,13 @@ const styles = StyleSheet.create({
     marginVertical:8,
   },
 
+  sender:{
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#2563EB',
+    marginBottom: 4,
+    },
+
   left:{
     alignItems:'flex-start',
   },
@@ -65,7 +93,7 @@ const styles = StyleSheet.create({
   },
 
   bubble:{
-    maxWidth:'75%',
+    maxWidth:'80%',
     padding:12,
     borderRadius:18,
   },
@@ -89,5 +117,18 @@ const styles = StyleSheet.create({
     alignSelf:'flex-end',
     marginTop:5,
   },
+
+  footer:{
+    flexDirection:'row',
+    justifyContent:'flex-end',
+    alignItems:'center',
+    marginTop:5,
+},
+
+tick:{
+    color:'#E5E7EB',
+    marginLeft:5,
+    fontSize:11,
+},
 
 });
