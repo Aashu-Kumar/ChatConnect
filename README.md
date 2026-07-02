@@ -1,97 +1,268 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 💬 ChatConnect
 
-# Getting Started
+A real-time chat application built using **React Native**, **Node.js**, and **Socket.IO**. The application allows multiple users to exchange messages instantly over a local network with a clean and responsive user interface.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 📱 Demo
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+🎥 **Screen Recording:** https://drive.google.com/file/d/1SrgJLOrhXueWYTkHy9itNbz72udePx8n/view?usp=drive_link
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+🔗 **GitHub Repository:** https://github.com/Aashu-Kumar/ChatConnect
 
-```sh
-# Using npm
+📦 **APK File:** *(Add Google Drive APK link here)*
+
+---
+
+## 📖 Project Overview
+
+This project was developed as part of a technical assessment to demonstrate:
+
+- Mobile application development using React Native
+- Backend development using Node.js
+- Real-time communication using Socket.IO
+- Client-server architecture
+- Clean project structure and code organization
+
+---
+
+## ✨ Features
+
+- 🔐 Simple Login Screen (Dummy Login)
+- 💬 Real-Time Messaging
+- ⚡ Instant Message Delivery using Socket.IO
+- 📱 Responsive Chat Interface
+- 👤 Sender Name Display
+- 🟢 Connection Status Indicator
+- 🕒 Message Timestamps
+- 📜 Auto Scrolling Chat
+- 📲 Multi-device Communication
+- 🎨 Clean and Modern UI
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React Native
+- TypeScript
+- React Navigation
+- React Native Safe Area Context
+
+### Backend
+
+- Node.js
+- Express.js
+- Socket.IO
+- CORS
+
+---
+
+## 📂 Project Structure
+
+```
+ChatConnect
+│
+├── src
+│   ├── components
+│   │   ├── Header.tsx
+│   │   ├── MessageBubble.tsx
+│   │   └── MessageInput.tsx
+│   │
+│   ├── navigation
+│   │   └── AppNavigator.tsx
+│   │
+│   ├── screens
+│   │   ├── LoginScreen.tsx
+│   │   └── ChatScreen.tsx
+│   │
+│   ├── services
+│   │   └── socket.ts
+│   │
+│   └── styles
+│       └── colors.ts
+│
+├── android
+├── ios
+├── App.tsx
+└── package.json
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Aashu-Kumar/ChatConnect.git
+```
+
+```bash
+cd ChatConnect
+```
+
+---
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## ▶️ Start the Backend
+
+Navigate to the backend folder and install dependencies.
+
+```bash
+cd ChatConnectBackend
+```
+
+```bash
+npm install
+```
+
+Start the server.
+
+```bash
+npm run dev
+```
+
+Backend runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+## ▶️ Start Metro
+
+```bash
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## ▶️ Run Android App
 
-### Android
-
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 📷 Screenshots
 
-```sh
-bundle install
+### 🔐 Login Screen
+
+<p align="center">
+  <img src="assets/login_screen.png" width="280"/>
+</p>
+
+---
+
+### 💬 Chat Screen
+
+<p align="center">
+  <img src="assets/chat_screen.png" width="280"/>
+</p>
+
+---
+
+### ⚡ Real-Time Chat
+
+<p align="center">
+  <img src="assets/realtime_chat.png" width="280"/>
+</p>
+
+---
+
+### 📱 Multi-Device Demo
+
+<p align="center">
+  <img src="assets/multi_device_demo.jpg" width="700"/>
+</p>
+
+---
+
+### 🖥️ Backend Server
+
+<p align="center">
+  <img src="assets/backend_server.png" width="800"/>
+</p>
+
+---
+
+## ⚙️ How It Works
+
+1. User enters a username.
+2. App connects to the Socket.IO server.
+3. Messages are sent to the backend.
+4. Server broadcasts messages to all connected clients.
+5. Every connected device receives messages instantly.
+
+---
+
+## 📡 Backend Events
+
+### Client → Server
+
+```
+send_message
 ```
 
-Then, and every time you update your native dependencies, run:
+### Server → Client
 
-```sh
-bundle exec pod install
+```
+receive_message
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+---
 
-```sh
-# Using npm
-npm run ios
+## 🎯 Assignment Requirements Covered
 
-# OR using Yarn
-yarn ios
-```
+| Requirement | Status |
+|-------------|--------|
+| React Native Frontend | ✅ |
+| Node.js Backend | ✅ |
+| Real-Time Messaging | ✅ |
+| Socket.IO | ✅ |
+| Send Messages | ✅ |
+| Receive Messages | ✅ |
+| Dummy Login | ✅ |
+| Message Timestamp | ✅ |
+| Clean Project Structure | ✅ |
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🚀 Future Improvements
 
-## Step 3: Modify your app
+- Private One-to-One Chat
+- User Authentication
+- Online Users List
+- Typing Indicator
+- Read Receipts
+- Message Persistence using MongoDB
+- Image & File Sharing
+- Push Notifications
+- Emoji Support
+- Dark Mode
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 👨‍💻 Author
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+**Aashu Kumar**
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+GitHub: https://github.com/Aashu-Kumar
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
+## 📄 License
 
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project was developed for educational and assessment purposes.
