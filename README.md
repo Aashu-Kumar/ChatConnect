@@ -156,44 +156,20 @@ npm run android
 ---
 
 
-## 📷 Screenshots
+## 📷 Application Screens
 
-### 🔐 Login Screen
+| Login Screen | Chat Screen |
+|-------------|-------------|
+| <img src="assets/login_screen.jpg" width="250"> | <img src="assets/chat_screen.jpg" width="250"> |
 
-<p align="center">
-  <img src="assets/login_screen.jpg" width="280"/>
-</p>
-
----
-
-### 💬 Chat Screen
-
-<p align="center">
-  <img src="assets/chat_screen.jpg" width="280"/>
-</p>
-
----
-
-### ⚡ Real-Time Chat
-
-<p align="center">
-  <img src="assets/realtime_chat.jpg" width="280"/>
-</p>
-
----
-
-### 📱 Multi-Device Demo
-
-<p align="center">
-  <img src="assets/multi_device_demo.jpeg" width="700"/>
-</p>
-
----
+| Real-Time Chat | Multi-Device Demo |
+|---------------|-------------------|
+| <img src="assets/realtime_chat.jpg" width="250"> | <img src="assets/multi_device_demo.jpeg" width="250"> |
 
 ### 🖥️ Backend Server
 
 <p align="center">
-  <img src="assets/backend_server.png" width="800"/>
+  <img src="assets/backend_server.png" width="600"/>
 </p>
 
 ---
