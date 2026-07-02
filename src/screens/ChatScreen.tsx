@@ -36,10 +36,16 @@ const ChatScreen = ({ route }: Props) => {
   useEffect(() => {
 
     socket.on('connect', () => {
+        console.log('✅ Connected:', socket.id);
         setIsConnected(true);
     });
 
-    socket.on('disconnect', () => {
+    socket.on('connect_error', (err) => {
+        console.log('❌ Connect Error:', err.message);
+    });
+
+    socket.on('disconnect', (reason) => {
+        console.log('❌ Disconnected:', reason);
         setIsConnected(false);
     });
 
@@ -60,6 +66,7 @@ const ChatScreen = ({ route }: Props) => {
 
         socket.off('receive_message');
         socket.off('connect');
+        socket.off('connect_error');
         socket.off('disconnect');
 
     };
